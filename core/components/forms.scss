@@ -1,0 +1,24 @@
+input[type=text] {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+    color: #fff;
+    -webkit-box-shadow: inset 0 -1px 0 #fff;
+    box-shadow: inset 0 -1px 0 #fff;
+}
+
+select {
+    border: none;
+    border-bottom: 1px solid $indigo;
+    padding: 5px 15px;
+    font-size: 14px;
+    display: block;
+}
+
+@include media-up($screen-sm) {
+    input[type=text] {
+        display: inline-block;
+        width: auto;
+    }
+}

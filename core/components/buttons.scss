@@ -1,0 +1,84 @@
+//** Stylesheet: Buttons  **//
+
+%button {
+	background-color: $button-color;
+    border: 0 solid getColor(green, 500);
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    padding: $button-padding;
+    font-size: $button-font-size;
+    border-radius: $radius;
+    @include box-shadow($button-box-shadow);
+    @include transition(.2s ease-in all);
+    &:hover, &:focus {
+        background-color: mix($button-color, black, 85%);
+        outline: none;
+        @include transition(.2s ease-out all);
+    }
+}
+
+.button {
+    @extend %button;
+    @include transition(.2s ease-out all);
+    * {
+        display: inline-block;
+    }
+    @for $i from 1 through length($status-var) {
+        &.#{nth($status, $i)} {
+            background: nth($status-var, $i);
+            &:hover, &:focus {
+                background-color: mix(nth($status-var, $i), black, 85%);
+                outline: none;
+                @include transition(.2s ease-out all);
+            }
+            &.outlined {
+                border-color: nth($status-var, $i);
+                color: nth($status-var, $i);
+                &:hover, &:focus {
+                    background-color: nth($status-var, $i);
+                    color: white;
+                }
+            }
+        }
+    }
+    &.outlined {
+        background: transparent;
+        border: $button-border solid;
+    }
+}
+
+.button-small {
+    @extend %button;
+    padding: $button-small-padding;
+    font-size: $button-small-font-size;
+    * {
+        display: inline-block;
+    }
+}
+
+.button-large {
+    @extend %button;
+    padding: $button-large-padding;
+    font-size: $button-large-font-size;
+    * {
+        display: inline-block;
+    }
+}
+
+.button-blk {
+    margin: 0 auto;
+    display: block;
+}
+
+button {
+    border: none;
+    @include border-radius(4px);
+    &:hover, &:focus { 
+        outline: none;
+    }
+}
+
+i {
+    cursor: pointer;
+}

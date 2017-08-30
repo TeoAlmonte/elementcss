@@ -1,0 +1,89 @@
+//** Stylesheet: Typography **//
+
+$font-stack:    (-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif);
+$font-display:  ($display, $font-stack);
+$font-body:     ($body, $font-stack);
+
+// Default Text Styles
+h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-3, .display-4 {
+	font-family: $font-display;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: normal;
+	margin: 0 0 $header-margin-bottom;
+}
+
+h1 {
+	font-size: $font-size-h1;
+}
+
+h2 {
+	font-size: $font-size-h2;
+}
+
+h3 {
+	font-size: $font-size-h3;
+}
+
+h4 {
+	font-size: $font-size-h4;
+}
+
+h5 {
+	font-size: $font-size-h5;
+}
+
+h6 {
+	font-size: $font-size-h6;
+}
+
+.display-1 {
+  font-size: $font-size-d1;
+}
+
+.display-2 {
+  font-size: $font-size-d2;
+
+}
+.display-3 {
+  font-size: $font-size-d3;
+
+}
+.display-4 {
+  font-size: $font-size-d4;
+}
+
+%p {
+	font-size: $font-size-p;
+	font-family: $font-body;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: ($font-size-p / 1rem) * 2em;
+	margin: 0 0 ($para-margin-bottom * 1.2);
+	letter-spacing: 0.03em;
+}
+
+p {
+	@extend %p;
+}
+
+.p-medium {
+	@extend %p; 
+	font-size: $font-size-p-medium;
+	line-height: ($font-size-p-medium / 1rem) * 1.25em;
+}
+
+.p-large {
+	@extend %p; 
+	font-size: $font-size-p-large;
+	line-height: ($font-size-p-large / 1rem) * 1.05em;
+}
+
+
+small {
+	font-size: $font-size-p*.9;
+	letter-spacing: 0.04em;
+}

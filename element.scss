@@ -1,0 +1,32 @@
+/*  ElementCSS Framework
+ *
+ *	  Document:   ElementCSS Framework
+ *	   Version:   0.0.2-alpha
+ *		  Date:   August 2017
+ *		Author:   Teo Almonte
+ *	Author URI:	  Teoalmonte.com
+ *  
+ * Copyright 2017 ElementCSS Framework
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+*/
+
+// 1. Configuration and helpers
+@import 'core/utils/module';
+@import 'core/globals/module';
+
+// 2. Vendors
+@import 'core/vendors/module';
+
+// 3. Base stuff
+@import 'core/components/module';
+
+// 4. Layout
+@import 'core/layout/module';
+
+// 5. Page-specific styles
+@import 'core/pages/module';
+
+// 6. Themes
+@import 'core/themes/module';

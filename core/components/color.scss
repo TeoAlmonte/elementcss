@@ -1,0 +1,272 @@
+//** Stylesheet: Color  **//
+
+/// Color Shades
+$color-shade:   85%;
+$color-shade2x: 50%;
+$color-shade3x: 35%;
+$color-shade4x: 15%;
+
+// Color Call
+@function getPal($color, $value) {
+  @return map-get(map-get($palette, $color), $value);
+}
+
+@function getColor($color, $value) {
+  @return map-get(map-get($expand, $color), $value);
+}
+
+$expand: (
+pink: (
+    100: mix($pink, white, $color-shade4x),
+    200: mix($pink, white, $color-shade3x),
+    300: mix($pink, white, $color-shade2x),
+    400: mix($pink, white, $color-shade),
+    500: $pink,
+    600: mix($pink, black, $color-shade),
+    700: mix($pink, black, $color-shade2x),
+    800: mix($pink, black, $color-shade3x),
+    900: mix($pink, black, $color-shade4x)
+  ),
+red: (
+    100: mix($red, white, $color-shade4x),
+    200: mix($red, white, $color-shade3x),
+    300: mix($red, white, $color-shade2x),
+    400: mix($red, white, $color-shade),
+    500: $red,
+    600: mix($red, black, $color-shade),
+    700: mix($red, black, $color-shade2x),
+    800: mix($red, black, $color-shade3x),
+    900: mix($red, black, $color-shade4x)
+  ),
+purple: (
+    100: mix($purple, white, $color-shade4x),
+    200: mix($purple, white, $color-shade3x),
+    300: mix($purple, white, $color-shade2x),
+    400: mix($purple, white, $color-shade),
+    500: $purple,
+    600: mix($purple, black, $color-shade),
+    700: mix($purple, black, $color-shade2x),
+    800: mix($purple, black, $color-shade3x),
+    900: mix($purple, black, $color-shade4x)
+  ),
+deep-purple: (
+    100: mix($deep-purple, white, $color-shade4x),
+    200: mix($deep-purple, white, $color-shade3x),
+    300: mix($deep-purple, white, $color-shade2x),
+    400: mix($deep-purple, white, $color-shade),
+    500: $deep-purple,
+    600: mix($deep-purple, black, $color-shade),
+    700: mix($deep-purple, black, $color-shade2x),
+    800: mix($deep-purple, black, $color-shade3x),
+    900: mix($deep-purple, black, $color-shade4x)
+  ),
+indigo: (
+    100: mix($indigo, white, $color-shade4x),
+    200: mix($indigo, white, $color-shade3x),
+    300: mix($indigo, white, $color-shade2x),
+    400: mix($indigo, white, $color-shade),
+    500: $indigo,
+    600: mix($indigo, black, $color-shade),
+    700: mix($indigo, black, $color-shade2x),
+    800: mix($indigo, black, $color-shade3x),
+    900: mix($indigo, black, $color-shade4x)
+  ),
+blue: (
+    100: mix($blue, white, $color-shade4x),
+    200: mix($blue, white, $color-shade3x),
+    300: mix($blue, white, $color-shade2x),
+    400: mix($blue, white, $color-shade),
+    500: $blue,
+    600: mix($blue, black, $color-shade),
+    700: mix($blue, black, $color-shade2x),
+    800: mix($blue, black, $color-shade3x),
+    900: mix($blue, black, $color-shade4x)
+  ),
+light-blue: (
+    100: mix($light-blue, white, $color-shade4x),
+    200: mix($light-blue, white, $color-shade3x),
+    300: mix($light-blue, white, $color-shade2x),
+    400: mix($light-blue, white, $color-shade),
+    500: $light-blue,
+    600: mix($light-blue, black, $color-shade),
+    700: mix($light-blue, black, $color-shade2x),
+    800: mix($light-blue, black, $color-shade3x),
+    900: mix($light-blue, black, $color-shade4x)
+  ),
+cyan: (
+    100: mix($cyan, white, $color-shade4x),
+    200: mix($cyan, white, $color-shade3x),
+    300: mix($cyan, white, $color-shade2x),
+    400: mix($cyan, white, $color-shade),
+    500: $cyan,
+    600: mix($cyan, black, $color-shade),
+    700: mix($cyan, black, $color-shade2x),
+    800: mix($cyan, black, $color-shade3x),
+    900: mix($cyan, black, $color-shade4x)
+  ),
+teal: (
+    100: mix($teal, white, $color-shade4x),
+    200: mix($teal, white, $color-shade3x),
+    300: mix($teal, white, $color-shade2x),
+    400: mix($teal, white, $color-shade),
+    500: $teal,
+    600: mix($teal, black, $color-shade),
+    700: mix($teal, black, $color-shade2x),
+    800: mix($teal, black, $color-shade3x),
+    900: mix($teal, black, $color-shade4x)
+  ),
+green: (
+    100: mix($green, white, $color-shade4x),
+    200: mix($green, white, $color-shade3x),
+    300: mix($green, white, $color-shade2x),
+    400: mix($green, white, $color-shade),
+    500: $green,
+    600: mix($green, black, $color-shade),
+    700: mix($green, black, $color-shade2x),
+    800: mix($green, black, $color-shade3x),
+    900: mix($green, black, $color-shade4x)
+  ),
+light-green: (
+    100: mix($light-green, white, $color-shade4x),
+    200: mix($light-green, white, $color-shade3x),
+    300: mix($light-green, white, $color-shade2x),
+    400: mix($light-green, white, $color-shade),
+    500: $light-green,
+    600: mix($light-green, black, $color-shade),
+    700: mix($light-green, black, $color-shade2x),
+    800: mix($light-green, black, $color-shade3x),
+    900: mix($light-green, black, $color-shade4x)
+  ),
+lime: (
+    100: mix($lime, white, $color-shade4x),
+    200: mix($lime, white, $color-shade3x),
+    300: mix($lime, white, $color-shade2x),
+    400: mix($lime, white, $color-shade),
+    500: $lime,
+    600: mix($lime, black, $color-shade),
+    700: mix($lime, black, $color-shade2x),
+    800: mix($lime, black, $color-shade3x),
+    900: mix($lime, black, $color-shade4x)
+  ),
+yellow: (
+    100: mix($yellow, white, $color-shade4x),
+    200: mix($yellow, white, $color-shade3x),
+    300: mix($yellow, white, $color-shade2x),
+    400: mix($yellow, white, $color-shade),
+    500: $yellow,
+    600: mix($yellow, black, $color-shade),
+    700: mix($yellow, black, $color-shade2x),
+    800: mix($yellow, black, $color-shade3x),
+    900: mix($yellow, black, $color-shade4x)
+  ),
+amber: (
+    100: mix($amber, white, $color-shade4x),
+    200: mix($amber, white, $color-shade3x),
+    300: mix($amber, white, $color-shade2x),
+    400: mix($amber, white, $color-shade),
+    500: $amber,
+    600: mix($amber, black, $color-shade),
+    700: mix($amber, black, $color-shade2x),
+    800: mix($amber, black, $color-shade3x),
+    900: mix($amber, black, $color-shade4x)
+  ),
+orange: (
+    100: mix($orange, white, $color-shade4x),
+    200: mix($orange, white, $color-shade3x),
+    300: mix($orange, white, $color-shade2x),
+    400: mix($orange, white, $color-shade),
+    500: $orange,
+    600: mix($orange, black, $color-shade),
+    700: mix($orange, black, $color-shade2x),
+    800: mix($orange, black, $color-shade3x),
+    900: mix($orange, black, $color-shade4x)
+  ),
+deep-orange: (
+    100: mix($deep-orange, white, $color-shade4x),
+    200: mix($deep-orange, white, $color-shade3x),
+    300: mix($deep-orange, white, $color-shade2x),
+    400: mix($deep-orange, white, $color-shade),
+    500: $deep-orange,
+    600: mix($deep-orange, black, $color-shade),
+    700: mix($deep-orange, black, $color-shade2x),
+    800: mix($deep-orange, black, $color-shade3x),
+    900: mix($deep-orange, black, $color-shade4x)
+  ),
+brown: (
+    100: mix($brown, white, $color-shade4x),
+    200: mix($brown, white, $color-shade3x),
+    300: mix($brown, white, $color-shade2x),
+    400: mix($brown, white, $color-shade),
+    500: $brown,
+    600: mix($brown, black, $color-shade),
+    700: mix($brown, black, $color-shade2x),
+    800: mix($brown, black, $color-shade3x),
+    900: mix($brown, black, $color-shade4x)
+  ),
+grey: (
+    100: mix($grey, white, $color-shade4x),
+    200: mix($grey, white, $color-shade3x),
+    300: mix($grey, white, $color-shade2x),
+    400: mix($grey, white, $color-shade),
+    500: $grey,
+    600: mix($grey, black, $color-shade),
+    700: mix($grey, black, $color-shade2x),
+    800: mix($grey, black, $color-shade3x),
+    900: mix($grey, black, $color-shade4x)
+  ),
+blue-grey: (
+    100: mix($blue-grey, white, $color-shade4x),
+    200: mix($blue-grey, white, $color-shade3x),
+    300: mix($blue-grey, white, $color-shade2x),
+    400: mix($blue-grey, white, $color-shade),
+    500: $blue-grey,
+    600: mix($blue-grey, black, $color-shade),
+    700: mix($blue-grey, black, $color-shade2x),
+    800: mix($blue-grey, black, $color-shade3x),
+    900: mix($blue-grey, black, $color-shade4x)
+  ),
+  black: (
+    100: mix($black, white, $color-shade4x),
+    200: mix($black, white, $color-shade3x),
+    300: mix($black, white, $color-shade2x),
+    400: mix($black, white, $color-shade),
+    500: $black,
+    600: mix($black, black, $color-shade),
+    700: mix($black, black, $color-shade2x),
+    800: mix($black, black, $color-shade3x),
+    900: mix($black, black, $color-shade4x)
+  ),
+  white: (
+    100: mix($white, white, $color-shade4x),
+    200: mix($white, white, $color-shade3x),
+    300: mix($white, white, $color-shade2x),
+    400: mix($white, white, $color-shade),
+    500: $white,
+    600: mix($white, black, $color-shade),
+    700: mix($white, black, $color-shade2x),
+    800: mix($white, black, $color-shade3x),
+    900: mix($white, black, $color-shade4x)
+  )
+) !default;
+
+$palette: (
+  brand: (
+    "primary":   getColor(blue, 500),
+    "secondary": getColor(lime, 500),
+  ),
+  text: (
+    "dark":      getColor(blue-grey, 700),
+    "light":     getColor(blue-grey, 600),
+    "lighter":   getColor(blue-grey, 300),
+    "accent":    $blue,
+    "secondary": $green,
+    "ui":        red
+  ),
+  background: (
+    "darker":  getColor(blue-grey, 800),
+    "dark":  getColor(blue-grey, 400),
+    "light": getColor(white, 500),
+    "lighter": getColor(grey, 100),
+    "body":  black
+  )
+) !default;

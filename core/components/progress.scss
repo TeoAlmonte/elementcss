@@ -1,0 +1,33 @@
+.progress {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    border-radius: $radius;
+    display: block;
+    height: 1rem;
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+    &:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+    &::-webkit-progress-value {
+        background-color: getColor(blue-grey, 700)
+    }
+    &::-moz-progress-bar {
+        background-color: getColor(blue-grey, 700)
+    }
+    &::-webkit-progress-bar {
+        background-color: getColor(blue-grey, 200)
+    }
+    @for $i from 1 through length($status-var) {
+        &.#{nth($status, $i)} {
+            &::-webkit-progress-value {
+                background-color: nth($status-var, $i)
+            }
+            &::-moz-progress-bar {
+                background-color: nth($status-var, $i)
+            }
+        }
+    }
+}

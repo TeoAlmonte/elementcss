@@ -1,0 +1,212 @@
+//** Stylesheet: Grid **//
+
+// Default Grids
+
+@mixin media-up($screen) {
+	@media only screen and (min-width:$screen) {
+	   @content;
+	}
+} 
+
+@mixin media-down($screen) {
+	@media only screen and (max-width:$screen) {
+	   @content;
+	}
+}
+
+@mixin media-only($screen-min, $screen-max) {
+	@media only screen and (min-width:$screen-min) and (max-width:$screen-max) {
+	   @content;
+	}
+}
+@include make-grid-columns;
+@for $col-width from 1 through $grid-columns {
+	.cols {
+		.col-#{$col-width} {
+			-webkit-box-flex: 0;
+			-webkit-flex: 0 0 ((100 / $grid-columns) * $col-width) * 1%;
+			-ms-flex: 0 0 ((100 / $grid-columns) * $col-width) * 1%;
+			flex: 0 0 ((100 / $grid-columns) * $col-width) * 1%;
+			width: ((100 / $grid-columns) * $col-width) * 1%;
+		}
+	}
+}
+
+@media (min-width: $screen-xs) {
+	.container {
+		width: $screen-xs - $grid-gutter-width;
+	}
+	@include make-xs-grid-columns;
+	@for $col-width from 1 through $grid-columns {
+		.cols {
+			.col-xs-#{$col-width} {
+				-webkit-box-flex: 0;
+				-webkit-flex: 0 0 ((100 / $grid-columns) * $col-width) * 1%;
+				-ms-flex: 0 0 ((100 / $grid-columns) * $col-width) * 1%;
+				flex: 0 0 ((100 / $grid-columns) * $col-width) * 1%;
+				width: ((100 / $grid-columns) * $col-width) * 1%;
+			}
+		}
+	}
+}
+
+@media (min-width: $screen-sm) {
+	.container {
+		width: $screen-sm - $grid-gutter-width;
+	}
+	@include make-sm-grid-columns;
+	@for $col-width from 1 through $grid-columns {
+		.cols {
+			.col-sm-#{$col-width} {
+				-webkit-box-flex: 0;
+				-webkit-flex: 0 0 ((100 / $grid-columns) * $col-width) * 1%;
+				-ms-flex: 0 0 ((100 / $grid-columns) * $col-width) * 1%;
+				flex: 0 0 ((100 / $grid-columns) * $col-width) * 1%;
+				width: ((100 / $grid-columns) * $col-width) * 1%;
+			}
+		}
+	}
+}
+
+@media (min-width: $screen-md) {
+	.container {
+		width: $screen-md - $grid-gutter-width;
+	}
+	@include make-md-grid-columns;
+	@for $col-width from 1 through $grid-columns {
+		.cols {
+			.col-md-#{$col-width} {
+				-webkit-box-flex: 0;
+				-webkit-flex: 0 0 ((100 / $grid-columns) * $col-width) * 1%;
+				-ms-flex: 0 0 ((100 / $grid-columns) * $col-width) * 1%;
+				flex: 0 0 ((100 / $grid-columns) * $col-width) * 1%;
+				width: ((100 / $grid-columns) * $col-width) * 1%;
+			}
+		}
+	}
+}
+
+@media (min-width: $screen-lg) {
+	.container {
+		width: $screen-lg - $grid-gutter-width;
+	}
+	@include make-lg-grid-columns;
+	@for $col-width from 1 through $grid-columns {
+		.cols {
+			.col-lg-#{$col-width} {
+				-webkit-box-flex: 0;
+				-webkit-flex: 0 0 ((100 / $grid-columns) * $col-width) * 1%;
+				-ms-flex: 0 0 ((100 / $grid-columns) * $col-width) * 1%;
+				flex: 0 0 ((100 / $grid-columns) * $col-width) * 1%;
+				width: ((100 / $grid-columns) * $col-width) * 1%;
+			}
+		}
+	}
+}
+
+@media (min-width: $screen-xl) {
+	.container {
+		width: $screen-xl - $grid-gutter-width;
+	}
+	@include make-xl-grid-columns;
+	@for $col-width from 1 through $grid-columns {
+		.cols {
+			.col-xl-#{$col-width} {
+				-webkit-box-flex: 0;
+				-webkit-flex: 0 0 ((100 / $grid-columns) * $col-width) * 1%;
+				-ms-flex: 0 0 ((100 / $grid-columns) * $col-width) * 1%;
+				flex: 0 0 ((100 / $grid-columns) * $col-width) * 1%;
+				width: ((100 / $grid-columns) * $col-width) * 1%;
+			}
+		}
+	}
+}
+
+@for $col-width from 0 through $grid-columns {
+	.offset-#{$col-width} {
+		margin-left: ((100 / $grid-columns) * $col-width) * 1%;
+	}
+}
+
+@media (min-width: $screen-xs) {
+	@for $col-width from 0 through $grid-columns {
+		.offset-xs-#{$col-width} {
+			margin-left: ((100 / $grid-columns) * $col-width) * 1%;
+		}
+	}
+}
+
+@media (min-width: $screen-sm) {
+	@for $col-width from 0 through $grid-columns {
+		.offset-sm-#{$col-width} {
+			margin-left: ((100 / $grid-columns) * $col-width) * 1%;
+		}
+	}
+}
+
+@media (min-width: $screen-md) {
+	@for $col-width from 0 through $grid-columns {
+		.offset-md-#{$col-width} {
+			margin-left: ((100 / $grid-columns) * $col-width) * 1%;
+		}
+	}
+}
+
+@media (min-width: $screen-lg) {
+	@for $col-width from 0 through $grid-columns {
+		.offset-lg-#{$col-width} {
+			margin-left: ((100 / $grid-columns) * $col-width) * 1%;
+		}
+	}
+}
+
+@media (min-width: $screen-xl) {
+	@for $col-width from 0 through $grid-columns {
+		.offset-xl-#{$col-width} {
+			margin-left: ((100 / $grid-columns) * $col-width) * 1%;
+		}
+	}
+}
+
+.container {
+	position: relative;
+	padding-left: $grid-gutter-width/2;
+	padding-right: $grid-gutter-width/2;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.container-fluid {
+	position: relative;
+	padding-left: $grid-gutter-width/2;
+	padding-right: $grid-gutter-width/2;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: $max-width;
+}
+
+.cols {
+	margin-left: -$grid-gutter-width/2;
+	margin-right: -$grid-gutter-width/2;
+	@include media-up($screen-sm) {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		margin-bottom: $grid-gutter-width;
+	}
+	> div {
+		display: block;
+		-ms-flex-preferred-size: 0;
+		flex-basis: 0;
+		-webkit-box-flex: 1;
+		-ms-flex-positive: 1;
+		flex-grow: 1;
+		-ms-flex-negative: 1;
+		flex-shrink: 1;
+		padding-left: $grid-gutter-width/2;
+		padding-right: $grid-gutter-width/2;
+		> div {
+			height: 100%;
+		}
+	}
+}

@@ -1,0 +1,146 @@
+
+// Body
+$body-bg: #f5f8fa;
+
+// Borders
+$laravel-border-color: darken($body-bg, 10%);
+$list-group-border: $laravel-border-color;
+$navbar-default-border: $laravel-border-color;
+$panel-default-border: $laravel-border-color;
+$panel-inner-border: $laravel-border-color;
+
+// Brands
+$brand-primary: #3097D1;
+$brand-info: #8eb4cb;
+$brand-success: #2ab27b;
+$brand-warning: #cbb956;
+$brand-danger: #bf5329;
+
+// Typography
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+$font-family-sans-serif: "Raleway", sans-serif;
+$font-size-base: 14px;
+$line-height-base: 1.6;
+$text-color: #636b6f;
+
+// Navbar
+$navbar-default-bg: #fff;
+
+// Buttons
+$btn-default-color: $text-color;
+
+// Inputs
+$input-border: lighten($text-color, 40%);
+$input-border-focus: lighten($brand-primary, 25%);
+$input-color-placeholder: lighten($text-color, 30%);
+
+// Panels
+$panel-default-heading-bg: #fff;
+
+//******************************************************************//
+// Stylesheet: Variables
+//******************************************************************//
+
+// Layout
+$section-padding: 2rem;
+$section-margin: 0 auto 3rem;
+$grid-columns: 12;
+$grid-gutter-width: 30px;
+$max-width: 70rem;
+
+$root:		"images/";
+
+// Type
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+$line-height:		      1rem;
+$font-size: 			  .85rem;
+$font-size-p:             .9rem;
+$font-size-p-medium:      1.2rem;
+$font-size-p-large:       1.5rem;
+$font-size-h1:            2.5rem;
+$font-size-h2:            2rem;
+$font-size-h3:            1.75rem;
+$font-size-h4:            1.5rem;
+$font-size-h5:            1.25rem;
+$font-size-h6:            1rem;
+$font-size-d1:            6.5rem;
+$font-size-d2:            5.5rem;
+$font-size-d3:            4.5rem;
+$font-size-d4:            3.5rem;
+$header-margin-bottom:    .75rem;
+$para-margin-bottom:      1.5em;
+$display: 'Monstserrat';
+$body: 'Roboto';
+
+// Colors
+$red:         #F44336;
+$pink:        #E91E63;
+$purple:      #9C27B0;
+$deep-purple: #673AB7;
+$indigo:      #3F51B5;
+$blue:        #2196F3;
+$light-blue:  #03A9F4;
+$cyan:        #00BCD4;
+$teal:        #009688;
+$green:       #4CAF50;
+$light-green: #8BC34A;
+$lime:        #CDDC39;
+$yellow:      #FFEB3B;
+$amber:       #FFC107;
+$orange:      #FF9800;
+$deep-orange: #FF5722;
+$brown:       #795548;
+$grey:        #9E9E9E;
+$blue-grey:   #607D8B;
+$black:       #101010;
+$white:       #fafafa;
+
+
+// Color Var
+$text-dark: $black;
+$link-color: $deep-orange;
+$primary: $blue;
+$accent:  $indigo;
+$success: $teal;
+$warning: $amber;
+$danger:  $pink;
+
+// Color Status
+$status: primary, accent, success, warning, danger;
+$status-var: $primary, $accent, $success, $warning, $danger;
+
+// Navigation
+$navbar-height: 64px;
+$navbar-bg-color: white;
+$nav-padding: 0 16px;
+
+// Media Queries
+$screen-xs: 576px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1240px;
+$screen-xl: 1580px;
+$screen-2x: 2048px;
+$screen-4x: 3840px;
+
+// Input Text
+$input-padding: 6px 15px;
+
+// Button
+$button-color: $danger;
+$button-padding: 10px 24px;
+$button-font-size: 16px;
+$button-small-padding: 5px 15px;
+$button-small-font-size: 12px;
+$button-large-padding: 12px 35px;
+$button-large-font-size: 24px;
+$button-border: .1em;
+$button-box-shadow: none;
+
+// Misc
+$radius:		.3em;
+$stroke:        .1rem;
+$border: $stroke $blue-grey solid;
+$transition:	4s;
